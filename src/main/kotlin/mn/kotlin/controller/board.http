@@ -1,0 +1,22 @@
+POST localhost:8080/boards
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "description": "test desc"
+}
+
+###
+PUT localhost:8080/boards/1
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "description": "test desc"
+}
+
+###
+DELETE localhost:8080/boards/1
+
+###
+
