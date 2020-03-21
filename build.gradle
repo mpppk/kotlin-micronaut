@@ -40,6 +40,13 @@ dependencies {
     testImplementation "io.micronaut.test:micronaut-test-kotlintest"
     testImplementation "io.mockk:mockk:1.9.3"
     testImplementation "io.kotlintest:kotlintest-runner-junit5:3.3.2"
+
+    // mn data
+    kapt "io.micronaut.data:micronaut-data-processor:1.0.1"
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation "io.micronaut.data:micronaut-data-jdbc"
+    runtime 'org.postgresql:postgresql:42.1.4'
+    runtime "io.micronaut.configuration:micronaut-jdbc-hikari"
 }
 
 test.classpath += configurations.developmentOnly
