@@ -7,7 +7,10 @@ plugins {
     id "org.flywaydb.flyway" version "6.3.1"
 }
 
-
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.forkOptions.jvmArgs << '-Dmicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop'
+}
 
 version "0.1"
 group "mn.kotlin"
