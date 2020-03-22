@@ -48,6 +48,10 @@ dependencies {
     implementation "io.micronaut.data:micronaut-data-jdbc"
     runtime 'org.postgresql:postgresql:42.1.4'
     runtime "io.micronaut.configuration:micronaut-jdbc-hikari"
+
+    // OAS
+    kapt "io.micronaut.configuration:micronaut-openapi:1.4.1"
+    implementation "io.swagger.core.v3:swagger-annotations"
 }
 
 test.classpath += configurations.developmentOnly
